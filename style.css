@@ -7,12 +7,12 @@
 }
 
 @font-face {
-    font-family: 'TheYearOfHandicrafts';
+    font-family: "TheYearOfHandicrafts";
     src: url(./assets/fonts/alfont_com_TheYearofHandicrafts-Bold.otf);
 }
 
 @font-face {
-    font-family: 'din-next-regular';
+    font-family: "din-next-regular";
     src: url(./assets/fonts/DIN\ NEXT™\ ARABIC\ REGULAR.otf);
 }
 * {
@@ -33,7 +33,7 @@ html[lang="ar"] h4,
 html[lang="ar"] h5,
 html[lang="ar"] h6,
 html[lang="ar"] .marquee-text {
-    font-family: 'TheYearOfHandicrafts', Impact, sans-serif !important;
+    font-family: "TheYearOfHandicrafts", Impact, sans-serif !important;
 }
 
 html[lang="ar"] p,
@@ -41,7 +41,7 @@ html[lang="ar"] a,
 html[lang="ar"] li,
 html[lang="ar"] button,
 html[lang="ar"] span:not(.marquee-content span):not(#hero-text h1 span) {
-    font-family: 'din-next-regular', sans-serif;
+    font-family: "din-next-regular", sans-serif;
 }
 
 html[lang="ar"] #nav {
@@ -189,7 +189,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 190px;
+    font-size: 12.5vw;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     font-weight: 500;
     color: var(--dark-text-color);
@@ -415,7 +415,8 @@ html[lang] #loader {
     white-space: nowrap;
 }
 
-.strip-1, .strip-3 {
+.strip-1,
+.strip-3 {
     background-color: var(--primary-bg-color);
     color: var(--dark-text-color);
 }
@@ -548,13 +549,17 @@ html[lang="ar"] .strip-3 .marquee-content {
 }
 
 #lastImage::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 150px;
-    background: linear-gradient(to bottom, var(--light-text-color) 0%, transparent 100%);
+    background: linear-gradient(
+        to bottom,
+        var(--light-text-color) 0%,
+        transparent 100%
+    );
     z-index: 10;
     pointer-events: none;
 }
@@ -618,4 +623,8 @@ html[lang="ar"] .strip-3 .marquee-content {
     font-size: 18px;
     font-weight: 300;
     color: var(--primary-dark-color);
+}
+
+@media (max-width: 1400px) {
+    
 }
