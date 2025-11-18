@@ -1,0 +1,90 @@
+{
+  "en": {
+    "nav": {
+      "shop": "Shop",
+      "about": "About Us",
+      "flavours": "Flavours",
+      "story": "Our Story",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Milky Scoops"
+    },
+    "product": {
+      "heading": "Browse Your Product",
+      "pistachio": "Pistachio Ice-cream",
+      "double": "Double Delight Ice-cream",
+      "strawberry": "Strawberry Ice-cream"
+    },
+    "gallery": {
+      "artisan": {
+        "title": "Artisan Crafted",
+        "desc": "Premium ingredients, exceptional taste"
+      },
+      "fresh": {
+        "title": "Fresh Daily",
+        "desc": "Made with love every morning"
+      },
+      "natural": {
+        "title": "Natural Flavors",
+        "desc": "Real fruits, real ingredients"
+      },
+      "classic": {
+        "title": "Classic Favorites",
+        "desc": "Timeless recipes, modern twist"
+      },
+      "creamy": {
+        "title": "Creamy Delights",
+        "desc": "Indulge in pure happiness"
+      }
+    },
+    "loader": {
+      "marquee": "CREAMY DELIGHTS • MILKY SCOOPS • ARTISAN CRAFTED • FRESH DAILY • "
+    },
+    "title": "Creamy Delights"
+  },
+  "ar": {
+    "nav": {
+      "shop": "المتجر",
+      "about": "من نحن",
+      "flavours": "النكهات",
+      "story": "قصتنا",
+      "contact": "تواصل معنا"
+    },
+    "hero": {
+      "title": "مثلجات كريمية"
+    },
+    "product": {
+      "heading": "تصفح منتجاتنا",
+      "pistachio": "آيس كريم الفستق",
+      "double": "آيس كريم دبل ديلايت",
+      "strawberry": "آيس كريم الفراولة"
+    },
+    "gallery": {
+      "artisan": {
+        "title": "صناعة حرفية",
+        "desc": "مكونات فاخرة، طعم استثنائي"
+      },
+      "fresh": {
+        "title": "طازج يومياً",
+        "desc": "صنع بحب كل صباح"
+      },
+      "natural": {
+        "title": "نكهات طبيعية",
+        "desc": "فواكه حقيقية، مكونات حقيقية"
+      },
+      "classic": {
+        "title": "المفضلات الكلاسيكية",
+        "desc": "وصفات خالدة، لمسة عصرية"
+      },
+      "creamy": {
+        "title": "لذة كريمية",
+        "desc": "انغمس في السعادة النقية"
+      }
+    },
+    "loader": {
+      "marquee": "لذة كريمية • مثلجات كريمية • صناعة حرفية • طازج يومياً • "
+    },
+    "title": "لذة كريمية"
+  }
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Creamy Delights</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script>
+            // Set language IMMEDIATELY before page renders
+            (function() {
+                const savedLang = localStorage.getItem('language') || 'en';
+                const html = document.documentElement;
+                html.setAttribute('lang', savedLang);
+                html.setAttribute('dir', savedLang === 'ar' ? 'rtl' : 'ltr');
+                
+                // Load and apply translations immediately
+                fetch('./translations.json')
+                    .then(response => response.json())
+                    .then(translations => {
+                        const data = translations[savedLang];
+                        // Store in window for later use
+                        window.__translations = translations;
+                        window.__currentLang = savedLang;
+                        
+                        // Update all text content before showing
+                        document.addEventListener('DOMContentLoaded', () => {
+                            document.querySelectorAll('[data-i18n]').forEach(el => {
+                                const key = el.getAttribute('data-i18n');
+                                const value = key.split('.').reduce((current, k) => current?.[k], data);
+                                if (value) el.textContent = value;
+                            });
+                            document.title = data.title;
+                        });
+                    })
+                    .catch(err => console.error('Translation load error:', err));
+            })();
+        </script>
+    </head>
+    <body>
+        <!-- Loading Screen -->
+        <div id="loader">
+            <div class="marquee-container">
+                <div class="marquee-strip strip-1">
+                    <div class="marquee-content">
+                        <span class="marquee-text" data-i18n="loader.marquee">CREAMY DELIGHTS • MILKY SCOOPS • ARTISAN CRAFTED • FRESH DAILY • </span>
+                        <span class="marquee-text" data-i18n="loader.marquee">CREAMY DELIGHTS • MILKY SCOOPS • ARTISAN CRAFTED • FRESH DAILY • </span>
+                    </div>
+                </div>
+                <div class="marquee-strip strip-2">
+                    <div class="marquee-content">
+                        <span class="marquee-text" data-i18n="loader.marquee">CREAMY DELIGHTS • MILKY SCOOPS • ARTISAN CRAFTED • FRESH DAILY • </span>
+                        <span class="marquee-text" data-i18n="loader.marquee">CREAMY DELIGHTS • MILKY SCOOPS • ARTISAN CRAFTED • FRESH DAILY • </span>
+                    </div>
+                </div>
+                <div class="marquee-strip strip-3">
+                    <div class="marquee-content">
+                        <span class="marquee-text" data-i18n="loader.marquee">CREAMY DELIGHTS • MILKY SCOOPS • ARTISAN CRAFTED • FRESH DAILY • </span>
+                        <span class="marquee-text" data-i18n="loader.marquee">CREAMY DELIGHTS • MILKY SCOOPS • ARTISAN CRAFTED • FRESH DAILY • </span>
+                    </div>
+                </div>
+            </div>
+            <svg class="radial-wipe" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="0" class="wipe-circle"/>
+            </svg>
+        </div>
+        
+        <div id="main">
+            <div id="nav">
+                <img src="./assets/creamy delights.png" alt="logo" />
+                <ul>
+                    <li data-i18n="nav.shop">Shop</li>
+                    <li data-i18n="nav.about">About Us</li>
+                    <li data-i18n="nav.flavours">Flavours</li>
+                    <li data-i18n="nav.story">Our Story</li>
+                    <li data-i18n="nav.contact">Contact</li>
+                </ul>
+                <div id="icons">
+                    <button id="lang-toggle" class="icon lang-btn">
+                        <span class="lang-text">AR</span>
+                    </button>
+                    <div class="icon"><i class="ri-user-fill"></i></div>
+                    <div class="icon">
+                        <i class="ri-shopping-cart-fill"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="hero">
+                <img src="./assets/almonds.png" alt="" class="almond-img" />
+                <div id="hero-text">
+                    <h1>
+                        <img src="./assets/strawberry scoop.png" alt="" />
+                        <span data-i18n="hero.title">Milky Scoops</span>
+                        <img src="./assets/strawberry.png" alt="" />
+                    </h1>
+                </div>
+                <img
+                    src="./assets/double delight.png"
+                    alt=""
+                    class="ice-cream-img"
+                />
+            </div>
+            <div id="product">
+                <h1 data-i18n="product.heading">Browse Your Product</h1>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./assets/pistachio icecream.png" alt="" />
+                        <div class="card-content">
+                            <div>
+                                <p data-i18n="product.pistachio">Pistachio Ice-cream</p>
+                                <span>$14.99</span>
+                            </div>
+                            <div class="icon">
+                                <i class="ri-shopping-cart-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <!-- <img src="./assets/pistachio icecream.png" alt=""> -->
+                        <div class="card-content">
+                            <div>
+                                <p data-i18n="product.double">Double Delight Ice-cream</p>
+                                <span>$14.99</span>
+                            </div>
+                            <div class="icon">
+                                <i class="ri-shopping-cart-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/strawberry icecream.png" alt="" />
+                        <div class="card-content">
+                            <div>
+                                <p data-i18n="product.strawberry">Strawberry Ice-cream</p>
+                                <span>$12.99</span>
+                            </div>
+                            <div class="icon">
+                                <i class="ri-shopping-cart-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="last">
+                <div id="container">
+                    <img src="./assets/icecream flavours.png" alt="" class="container-img-left">
+                    <div id="content">
+                        <h1>Milky Scoops</h1>
+                        <p>Our Unique Production is 100% Healthy</p>
+                        <button>Learn More</button>
+                    </div>
+                    <img src="./assets/caramel scoops.png" alt="" class="container-img-right">
+                </div>
+            </div> -->
+            <div id="lastImage">
+                <div class="image-container">
+                    <img src="./assets/StackImage-1 (Custom).png" alt="">
+                    <div class="image-overlay">
+                        <h2 data-i18n="gallery.artisan.title">Artisan Crafted</h2>
+                        <p data-i18n="gallery.artisan.desc">Premium ingredients, exceptional taste</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="./assets/StackImage-2 (Custom).png" alt="">
+                    <div class="image-overlay">
+                        <h2 data-i18n="gallery.fresh.title">Fresh Daily</h2>
+                        <p data-i18n="gallery.fresh.desc">Made with love every morning</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="./assets/StackImage-3 (Custom).png" alt="">
+                    <div class="image-overlay">
+                        <h2 data-i18n="gallery.natural.title">Natural Flavors</h2>
+                        <p data-i18n="gallery.natural.desc">Real fruits, real ingredients</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="./assets/StackImage-4 (Custom).png" alt="">
+                    <div class="image-overlay">
+                        <h2 data-i18n="gallery.classic.title">Classic Favorites</h2>
+                        <p data-i18n="gallery.classic.desc">Timeless recipes, modern twist</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="./assets/StackImage-5 (Custom).png" alt="">
+                    <div class="image-overlay">
+                        <h2 data-i18n="gallery.creamy.title">Creamy Delights</h2>
+                        <p data-i18n="gallery.creamy.desc">Indulge in pure happiness</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
