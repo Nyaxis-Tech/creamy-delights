@@ -104,7 +104,7 @@ html {
 
 #nav > img {
     height: 100px;
-    width: 200px;
+    width: 100px;
 }
 
 #nav ul {
@@ -117,6 +117,10 @@ html {
 }
 #nav ul li {
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+#nav ul li:hover {
+    color:#904c19; 
 }
 
 #icons {
@@ -127,7 +131,8 @@ html {
 .icon {
     width: 30px;
     height: 30px;
-    background-color: var(--yellow-icon-color);
+    background-color: var(--dark-text-color);
+    color: var(--primary-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,16 +140,21 @@ html {
 }
 
 .icon i {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .lang-btn {
     cursor: pointer;
     border: none;
-    background-color: var(--yellow-icon-color);
+    background-color: var(--dark-text-color);
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    /* margin-top:-10px; */
     font-size: 12px;
-    color: var(--dark-text-color);
+    color: var(--primary-bg-color);
     transition: all 0.3s ease;
 }
 
@@ -154,6 +164,7 @@ html {
 
 .lang-text {
     /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
+    margin-bottom: 2px;;
     font-weight: 500;
 }
 #hero {
