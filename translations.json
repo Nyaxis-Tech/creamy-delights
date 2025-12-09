@@ -41,6 +41,18 @@
     "loader": {
       "marquee": "CREAMY DELIGHTS • MILKY SCOOPS • ARTISAN CRAFTED • FRESH DAILY • "
     },
+    "footer": {
+      "description": "Handcrafted ice cream made with love and premium ingredients for the perfect treat.",
+      "links": {
+        "home": "Home",
+        "shop": "Shop",
+        "flavours": "Flavours",
+        "story": "Our Story",
+        "contact": "Contact"
+      },
+      "address": "Riyadh, Saudi Arabia",
+      "copyright": "Copyright © 2025 Creamy Delights - All Rights Reserved"
+    },
     "title": "Creamy Delights"
   },
   "ar": {
@@ -84,6 +96,18 @@
     },
     "loader": {
       "marquee": "لذة كريمية • مثلجات كريمية • صناعة حرفية • طازج يومياً • "
+    },
+    "footer": {
+      "description": "آيس كريم مصنوع يدوياً بحب ومكونات فاخرة للحصول على أفضل تجربة.",
+      "links": {
+        "home": "الرئيسية",
+        "shop": "المتجر",
+        "flavours": "النكهات",
+        "story": "قصتنا",
+        "contact": "تواصل معنا"
+      },
+      "address": "الرياض، المملكة العربية السعودية",
+      "copyright": "جميع الحقوق محفوظة © 2025 لذة كريمية"
     },
     "title": "لذة كريمية"
   }
